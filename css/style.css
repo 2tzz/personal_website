@@ -577,3 +577,20 @@ section.active {
     opacity: 1;
     transform: scale(1);
 }
+
+.resume-detail.about .resume-list {
+    height: auto;
+    grid-template-columns: repeat(auto-fit , minmax(25rem , 1rem));
+}
+
+.resume-detail.about .resume-item {
+    height: auto;
+    padding: 0 0 .5rem ;
+    background: transparent;
+}
+
+.resume-detail.about .resume-item p span {
+    color: var(--main-color);
+    margin-left: 1rem;
+    font-size: 1.8rem;
+}
