@@ -589,8 +589,12 @@ section.active {
     background: transparent;
 }
 
-.resume-detail.about .resume-item p span {
+.resume-detail.about .resume-item  span {
     color: var(--main-color);
     margin-left: 1rem;
     font-size: 1.8rem;
+}
+
+.resume-detail.about .resume-item  p {
+
 }
