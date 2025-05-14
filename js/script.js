@@ -33,18 +33,25 @@ navLinks.forEach((link, idx) => {
         e.preventDefault();
         
         if (!link.classList.contains('active')) {
+            // Start transition out
             removeActiveLinks();
             removeActiveSections();
             
+            // Add active class to clicked link
             link.classList.add('active');
-            sections[idx].classList.add('active');
-            sections[idx].scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
+            
+            // Delay section activation to match navbar animation
+            setTimeout(() => {
+                sections[idx].classList.add('active');
+                sections[idx].scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }, 2000); // Matches navbar animation duration
         }
     });
 });
+
 
 logoLink.addEventListener('click', (e) => {
     e.preventDefault();
@@ -54,11 +61,14 @@ logoLink.addEventListener('click', (e) => {
         removeActiveSections();
         
         navLinks[0].classList.add('active');
-        sections[0].classList.add('active');
-        sections[0].scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-        });
+        
+        setTimeout(() => {
+            sections[0].classList.add('active');
+            sections[0].scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }, 2000); // Matches navbar animation duration
     }
 });
 

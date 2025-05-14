@@ -91,7 +91,7 @@ nav a.active {
     background: var(--bg-color);
     animation: hide-bars .5s ease-in-out both;
     animation-delay: calc(.1s * var(--i));
-    
+    transition: transform 0.5s ease-in-out;
 }
 
 @keyframes hide-bars {
@@ -126,6 +126,7 @@ section {
     visibility: hidden;
     opacity: 0;
     overflow: hidden ;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
 }
 
 section.active {
@@ -869,4 +870,23 @@ section.active {
 .contact-box .btn{
     margin-top: 2rem;
     cursor: pointer;
+}
+
+
+/* break points */
+
+@media screen and (max-width: 1200px){
+    html {
+        font-size: 55%;
+    }
+}
+
+@media screen and (max-width: 992px){
+    header{
+        padding: 2rem 4%;
+    }
+
+    section {
+        padding: 10rem 4% 2rem;
+    }
 }
