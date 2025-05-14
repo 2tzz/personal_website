@@ -592,9 +592,10 @@ section.active {
 .resume-detail.about .resume-item  span {
     color: var(--main-color);
     margin-left: 1rem;
-    font-size: 1.8rem;
+    font-size: 1.5em;
 }
 
 .resume-detail.about .resume-item  p {
-
+    font-size: 2.5rem;
+    
 }
