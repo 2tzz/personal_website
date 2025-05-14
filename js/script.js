@@ -1,14 +1,26 @@
-
 const navLinks = document.querySelectorAll('header nav a');
 const sections = document.querySelectorAll('section');
-
+const logoLink = document.querySelector('.logo');
 
 const removeActiveLinks = () => {
+
+    const header = document.querySelector('header')
+    const barsBox = document.querySelector('.bars-box')
+
+    header.classList.remove('active');
+    setTimeout(() => {
+        header.classList.add('active');
+    }, 1100);
+
     navLinks.forEach(link => {
         link.classList.remove('active');
     });
-};
 
+    barsBox.classList.remove('active');
+    setTimeout(() => {
+        barsBox.classList.add('active');
+    }, 1100);
+};
 
 const removeActiveSections = () => {
     sections.forEach(section => {
@@ -16,23 +28,16 @@ const removeActiveSections = () => {
     });
 };
 
-
 navLinks.forEach((link, idx) => {
     link.addEventListener('click', (e) => {
         e.preventDefault();
-        
         
         if (!link.classList.contains('active')) {
             removeActiveLinks();
             removeActiveSections();
             
-          
             link.classList.add('active');
-            
-           
             sections[idx].classList.add('active');
-            
-           
             sections[idx].scrollIntoView({
                 behavior: 'smooth',
                 block: 'start'
@@ -41,11 +46,29 @@ navLinks.forEach((link, idx) => {
     });
 });
 
+logoLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    
+    if (!navLinks[0].classList.contains('active')) {
+        removeActiveLinks();
+        removeActiveSections();
+        
+        navLinks[0].classList.add('active');
+        sections[0].classList.add('active');
+        sections[0].scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
+});
 
 window.addEventListener('DOMContentLoaded', () => {
     navLinks[0].classList.add('active');
     sections[0].classList.add('active');
 });
+
+
+//resume
 
 
 const resumeBtns = document.querySelectorAll('.resume-btn');
