@@ -140,3 +140,7 @@ arrowLeft.addEventListener('click', () => {
 
 // Initialize
 updatePortfolio();
+
+
+
+
