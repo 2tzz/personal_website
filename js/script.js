@@ -157,21 +157,42 @@ document.querySelector('.btn[download]').addEventListener('click', function() {
 
 // Initialize EmailJS with your User ID
 (function() {
-    emailjs.init('R4PggCaUW0dBRPQWo'); // Get this from EmailJS dashboard
-})();
+    emailjs.init('R4PggCaUW0dBRPQWo', {
+    host: 'smtp.gmail.com',
+    port: 465,
+    secure: true
+    });
+});
 
 document.getElementById('contactForm').addEventListener('submit', function(event) {
     event.preventDefault();
     
-    const serviceID = 'service_9peacgb'; // From EmailJS dashboard
-    const templateID = 'template_0jelvoo'; // From EmailJS dashboard
-    
-    // Send the email
-    emailjs.sendForm(serviceID, templateID, this)
+    // Validate reCAPTCHA first
+    if (grecaptcha.getResponse().length === 0) {
+        alert('Please complete the reCAPTCHA');
+        return;
+    }
+
+    emailjs.sendForm('service_9peacgb', 'template_0jelvoo', this)
         .then(() => {
             alert('Message sent successfully!');
-            document.getElementById('contactForm').reset();
+            this.reset();
+            grecaptcha.reset();
         }, (error) => {
-            alert('Failed to send message: ' + JSON.stringify(error));
+            console.error('EmailJS Error:', error);
+            alert(`Failed to send message: ${error.text}`);
         });
 });
+
+
+const formMessage = document.querySelector('.form-message');
+
+function showMessage(message, isSuccess) {
+    formMessage.textContent = message;
+    formMessage.className = `form-message ${isSuccess ? 'success' : 'error'}`;
+    
+    setTimeout(() => {
+        formMessage.textContent = '';
+        formMessage.className = 'form-message';
+    }, 5000);
+}
