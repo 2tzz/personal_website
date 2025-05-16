@@ -155,3 +155,23 @@ document.querySelector('.btn[download]').addEventListener('click', function() {
 });
 
 
+// Initialize EmailJS with your User ID
+(function() {
+    emailjs.init('R4PggCaUW0dBRPQWo'); // Get this from EmailJS dashboard
+})();
+
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    const serviceID = 'service_9peacgb'; // From EmailJS dashboard
+    const templateID = 'template_0jelvoo'; // From EmailJS dashboard
+    
+    // Send the email
+    emailjs.sendForm(serviceID, templateID, this)
+        .then(() => {
+            alert('Message sent successfully!');
+            document.getElementById('contactForm').reset();
+        }, (error) => {
+            alert('Failed to send message: ' + JSON.stringify(error));
+        });
+});
