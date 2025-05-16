@@ -28,6 +28,8 @@ const removeActiveSections = () => {
     });
 };
 
+
+
 navLinks.forEach((link, idx) => {
     link.addEventListener('click', (e) => {
         e.preventDefault();
@@ -142,5 +144,14 @@ arrowLeft.addEventListener('click', () => {
 updatePortfolio();
 
 
+
+
+// Add to your script.js
+document.querySelector('.btn[download]').addEventListener('click', function() {
+    gtag('event', 'CV_download', {
+        'event_category': 'Engagement',
+        'event_label': 'CV Download'
+    });
+});
 
 
