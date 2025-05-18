@@ -48,18 +48,15 @@ This website is built using a modern tech stack to ensure responsiveness, perfor
 
 ```
 personal_website/
-├── backend/                # Django backend
-│   ├── api/                # API endpoints
-│   ├── settings.py         # Django settings
+├── backend/                # backend
+│   ├── api/                     
 │   └── ...
-├── frontend/               # React frontend
+├── frontend/              
 │   ├── public/             # Static files
 │   ├── src/                # React components and pages
 │   └── ...
 ├── media/                  # Uploaded media files
-├── static/                 # Static assets
-├── templates/              # HTML templates
-├── manage.py               # Django management script
+├── static/                 # HTML templates         
 └── README.md               # Project documentation
 ```
 
