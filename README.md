@@ -11,7 +11,7 @@ Welcome to the source code repository for [thilakshana.vip](https://thilakshana.
 
 ## 🚀 Live Website
 
-👉 [https://thilakshana.vip](https://thilakshana.vip)
+👉 [click - me !](https://thilakshana.vip)
 
 ---
 
