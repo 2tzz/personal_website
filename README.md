@@ -5,6 +5,10 @@
 
 Welcome to the source code repository for [thilakshana.vip](https://thilakshana.vip), the personal portfolio of **Thilakshana Weerasinghe**—a passionate software developer and creative designer from Sri Lanka. This website showcases my projects, services, and skills in web development, AI, UI/UX design, and more.
 
+![Website Preview](redme/home.png)
+![Website Preview](redme/services.png)
+![Website Preview](redme/resume.png)
+![Website Preview](redme/portfolio.png)
 ![Website Preview](redme/contact.png) <!-- Replace with an actual screenshot of your website -->
 
 ---
