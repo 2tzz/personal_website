@@ -3,9 +3,18 @@
 
 # 🧑‍💻 Thilakshana.vip — Personal Portfolio Website
 
-Welcome to the source code repository for [thilakshana.vip](https://thilakshana.vip), the personal portfolio of **Thilakshana Weerasinghe**—a passionate software developer and creative designer from Sri Lanka. This website showcases my projects, services, and skills in web development, AI, UI/UX design, and more.
+Welcome to the source code repository for [thilakshana.vip](https://thilakshana.vip), the personal portfolio of **Thilakshana Weerasinghe**—a passionate software developer and creative designer from Sri Lanka. This website showcases my projects, services, and skills in web development, UI/UX design, and more.
 
-![Website Preview](https://user-images.githubusercontent.com/yourusername/your-image.png) <!-- Replace with an actual screenshot of your website -->
+
+---
+
+## 📸 Preview
+
+![Website Preview](redme/home.png)
+![Website Preview](redme/services.png)
+![Website Preview](redme/resume.png)
+![Website Preview](redme/portfolio.png)
+![Website Preview](redme/contact.png) <!-- Replace with an actual screenshot of your website -->
 
 ---
 
@@ -60,12 +69,6 @@ personal_website/
 └── README.md               # Project documentation
 ```
 
----
-
-## 📸 Preview
-
-![Homepage Screenshot](https://user-images.githubusercontent.com/yourusername/homepage.png) <!-- Replace with actual screenshots -->
-![Projects Section](https://user-images.githubusercontent.com/yourusername/projects.png)
 
 ---
 
