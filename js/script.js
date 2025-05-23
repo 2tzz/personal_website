@@ -2,6 +2,8 @@ const navLinks = document.querySelectorAll('header nav a');
 const sections = document.querySelectorAll('section');
 const logoLink = document.querySelector('.logo');
 
+
+
 const removeActiveLinks = () => {
 
     const header = document.querySelector('header')
@@ -196,3 +198,5 @@ function showMessage(message, isSuccess) {
         formMessage.className = 'form-message';
     }, 5000);
 }
+
+

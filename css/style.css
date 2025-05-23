@@ -117,6 +117,8 @@ nav a.active {
     }
 }
 
+
+
 section {
     position: absolute;
     width: 100%;
@@ -244,14 +246,19 @@ section.active {
 
 .home-img .img-box {
     position: relative;
-    width: 32vw;
-    height: 32vw;
+    width: 35vw;
+    height: 35vw;
     border-radius: 50%;
     padding: .5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+
+    image-rendering: auto;               /* Let the browser decide the best rendering */
+    image-rendering: smooth;             /* Alias for high-quality scaling (not standard) */
+    image-rendering: -webkit-optimize-contrast; /* For Safari and older webkits */
+    -ms-interpolation-mode: bicubic;
 }
 
 .home-img .img-box::before,
@@ -277,6 +284,7 @@ section.active {
 
 .home-img .img-box .img-item {
     position: relative;
+    
     width: 100%;
     height: 100%;
     background-color: var(--bg-color);
@@ -286,6 +294,7 @@ section.active {
     justify-content: center;
     z-index: 1;
     overflow: hidden;
+    
 }
 
 .home-img .img-box .img-item img {
