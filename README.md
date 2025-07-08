@@ -9,7 +9,7 @@ Welcome to the source code repository for my **Flask-based blog website**, a min
 
 ## 📸 Preview
 
-![Home](redme/home.png)
+![Home](images/home.png)
 ![Post](redme/post.png)
 ![About](redme/about.png)
 ![Contact](redme/contact.png)
