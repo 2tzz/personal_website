@@ -1,111 +1,161 @@
 
 ---
 
-# 🧑‍💻 Thilakshana.vip — Personal Portfolio Website
+# 🧑‍💻 Personal Blog — Flask Web Application
 
-Welcome to the source code repository for [thilakshana.vip](https://thilakshana.vip), the personal portfolio of **Thilakshana Weerasinghe**—a passionate software developer and creative designer from Sri Lanka. This website showcases my projects, services, and skills in web development, UI/UX design, and more.
-
+Welcome to the source code repository for my **Flask-based blog website**, a minimal and clean personal blog platform built to demonstrate dynamic routing, template inheritance, and REST API integration. This project serves as a foundational template for creating content-driven websites using Flask and Jinja2.
 
 ---
 
 ## 📸 Preview
 
-![Website Preview](redme/home.png)
-![Website Preview](redme/services.png)
-![Website Preview](redme/resume.png)
-![Website Preview](redme/portfolio.png)
-![Website Preview](redme/contact.png) <!-- Replace with an actual screenshot of your website -->
+![Home](redme/home.png)
+![Post](redme/post.png)
+![About](redme/about.png)
+![Contact](redme/contact.png)
+
+> 📝 *Note: Replace the above image paths with actual screenshots from your project if needed.*
 
 ---
 
 ## 🚀 Live Website
 
-👉 [click - me !](https://thilakshana.vip)
+👉 [click - me !](https://your-deployment-url.com)
 
 ---
 
 ## 🛠️ Technologies Used
 
-This website is built using a modern tech stack to ensure responsiveness, performance, and scalability:
+The app is structured to highlight both design and backend functionality using:
 
-* **Frontend**:
-  * [Tailwind CSS](https://tailwindcss.com/) — Utility-first CSS framework for rapid UI development
-  * [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) & [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS)
+### 🧩 Backend
+- **Flask** – Lightweight web framework in Python.
+- **Jinja2** – Template engine for Python (built into Flask).
+- **Requests** – Used to fetch blog content dynamically from a JSON API.
 
+### 🎨 Frontend
+- **HTML5 + CSS3**
+- **Bootstrap 5** – Responsive components and layout grid.
+- **Google Fonts** – Lora and Open Sans for elegant typography.
+- **Font Awesome** – Icon set for UI enhancement.
 
-
-* **Additional Tools**:
-
-  * [Figma](https://www.figma.com/) & [Adobe XD](https://www.adobe.com/products/xd.html) — UI/UX design
-  * [Adobe Illustrator](https://www.adobe.com/products/illustrator.html) — Graphic design
-  * [Premiere Pro](https://www.adobe.com/products/premiere.html) & [CapCut](https://www.capcut.com/) — Video editing
+### 📦 API
+- [NPoint](https://api.npoint.io/) – Hosting external JSON data for blog posts.
 
 ---
 
 ## ✨ Features
 
-* **Responsive Design**: Optimized for desktops, tablets, and mobile devices.
-* **Interactive UI/UX**: Engaging user interface with smooth animations and transitions.
-* **Project Showcase**: Detailed sections highlighting major projects with descriptions and links.
-* **Service Listings**: Overview of services offered, including web development, design, SEO, and more.
-* **Contact Form**: Easy-to-use form for visitors to get in touch.
-* **SEO Optimized**: Implemented best practices to enhance search engine visibility.
+✅ Dynamic blog post routing  
+✅ Responsive design with Bootstrap  
+✅ Static file management (CSS, JS, images, favicon)  
+✅ Modular HTML templates (`header.html`, `footer.html`)  
+✅ About & Contact pages  
+✅ External API integration for blog content  
 
 ---
 
 ## 📁 Project Structure
 
 ```
-personal_website/
-├── backend/                # backend
-│   ├── api/                     
-│   └── ...
-├── frontend/              
-│   ├── public/             # Static files
-│   ├── src/                # React components and pages
-│   └── ...
-├── media/                  # Uploaded media files
-├── static/                 # HTML templates         
-└── README.md               # Project documentation
+
+personal\_website/
+│
+├── app.py                          # Flask app entry point
+├── static/                         # Static assets
+│   ├── css/
+│   │   └── styles.css
+│   ├── js/
+│   │   └── scripts.js
+│   ├── assets/
+│       ├── favicon.ico
+│       └── img/
+│           └── post-bg.jpg
+│
+├── templates/                      # HTML templates
+│   ├── index.html
+│   ├── post.html
+│   ├── about.html
+│   ├── contact.html
+│   ├── header.html
+│   └── footer.html
+│
+└── README.md
+
+````
+
+---
+
+## 🔧 Sample Code Snippets
+
+### ➤ Fetching Blog Posts from an API
+
+```python
+import requests
+
+response = requests.get('https://api.npoint.io/1df9a2e468e2408de0fc')
+all_posts = response.json()
+````
+
+---
+
+### ➤ Flask Dynamic Routing
+
+```python
+@app.route('/blog/<int:num>')
+def get_blogs(num):
+    return render_template("post.html", posts=all_posts, number=num)
 ```
 
+---
+
+### ➤ Jinja2 Template Loop
+
+```jinja
+{% for blog_post in posts %}
+    {% if blog_post["id"] == number %}
+        <h1>{{ blog_post["title"] }}</h1>
+        <p>{{ blog_post["body"] }}</p>
+    {% endif %}
+{% endfor %}
+```
 
 ---
 
 ## 🧑‍💼 About Me
 
-I'm **Thilakshana Weerasinghe**, a 23-year-old developer passionate about creating innovative digital solutions. With a strong foundation in Python and a keen eye for design, I specialize in building responsive websites, developing intelligent chatbots, and crafting compelling visual content.
+I’m **Thilakshana Thilakshana**, a 23-year-old Python developer and creative designer based in Sri Lanka. I specialize in developing full-stack applications, building REST APIs, and designing beautiful user interfaces.
 
-* **Location**: Borella, Sri Lanka
 * **Email**: [tthiyura1@gmail.com](mailto:tthiyura1@gmail.com)
 * **Phone**: (+94) 712 835 711
+* **Website**: [thilakshana.vip](https://thilakshana.vip)
 * **Freelance**: Available
-* **Resume**: [Download CV](https://thilakshana.vip/cv.pdf) <!-- Replace with actual CV link -->
 
 ---
 
-## 📈 Projects Highlight
+## 🔗 Related Projects
 
-### 1. [StudyBuddy - Real-time Developer Chat](https://studybuddev.herokuapp.com/)
+### 🧠 [StudyBuddy - Developer Chatroom](https://studybuddev.herokuapp.com/)
 
-A real-time chat application for developers to connect, share knowledge, and collaborate.
+A live chat platform built for developer collaboration and discussion.
 
-* **Technologies**: Django, Python, JavaScript, SQLite
+> Stack: Django, SQLite, WebSockets
 
-### 2. E-Commerce REST API
+### 🛒 E-Commerce API (JWT Auth)
 
-A robust backend for e-commerce operations with JWT authentication and payment processing.
+A secure, scalable backend API for e-commerce platforms.
 
-* **Technologies**: Django REST Framework, Python, PostgreSQL
+> Stack: Django REST Framework, PostgreSQL
 
+---
 
 ## 📬 Contact
 
-For inquiries, collaborations, or feedback:
+For project inquiries, freelance work, or collaborations:
 
 * **Email**: [tthiyura1@gmail.com](mailto:tthiyura1@gmail.com)
 * **Phone**: (+94) 712 835 711
-* **Website**: [cleck - me !](https://thilakshana.vip)
+* **GitHub**: [2tzz](https://github.com/2tzz)
 
 ---
 
