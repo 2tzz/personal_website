@@ -14,9 +14,7 @@ Welcome to the source code repository for my **Flask-based blog website**, a min
 ![About](redme/about.png)
 ![Contact](redme/contact.png)
 
-> 📝 *Note: Replace the above image paths with actual screenshots from your project if needed.*
 
----
 
 ## 🚀 Live Website
 
