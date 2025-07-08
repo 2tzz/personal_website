@@ -10,15 +10,16 @@ Welcome to the source code repository for my **Flask-based blog website**, a min
 ## 📸 Preview
 
 ![Home](images/home.png)
-![Post](redme/post.png)
-![About](redme/about.png)
-![Contact](redme/contact.png)
+![services](images/services.png)
+![portfolio](images/projects.png)
+![About](images/resume.png)
+![Contact](images/contact.png)
 
 
 
 ## 🚀 Live Website
 
-👉 [click - me !](https://your-deployment-url.com)
+👉 [click - me !](https://thilakshana.vip/)
 
 ---
 
